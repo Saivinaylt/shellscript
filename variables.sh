@@ -30,8 +30,8 @@ echo " ${frined1} he dont want ${frined2} "
 echo 
 echo " ${frined1} just summa fn testing variables concepts ${frined2} "
 
-echo  "enter username:"
+echo -n "enter username:"
 
-echo  "enter passwd:"
+echo -n "enter passwd:"
 
 echo
