@@ -10,4 +10,4 @@ echo "todays date ${current_date}"
 frined1=Ramesh
 frined2=Suresh
 
-echo " ${frined1} and ${frined2}
+echo " ${frined1} and ${frined2} "
