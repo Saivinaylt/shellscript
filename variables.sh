@@ -31,7 +31,7 @@ echo
 echo " ${frined1} just summa fn testing variables concepts ${frined2} "
 
 echo -n "enter username: "
-read  USERNAME
+read -s USERNAME
 
 
 echo
