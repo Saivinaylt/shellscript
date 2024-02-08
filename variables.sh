@@ -1,4 +1,4 @@
-
+#!/bin/bash
 course="Devops"
 echo "this is a course started ${course} today"
 
@@ -30,10 +30,8 @@ echo " ${frined1} he dont want ${frined2} "
 echo 
 echo " ${frined1} just summa fn testing variables concepts ${frined2} "
 
-echo -n "enter username:"
-read -s USERNAME
-echo
-echo -n "enter passwd:"
-read -s PASSWD
+echo -n "enter username: "
+read  USERNAME
+
 
 echo
