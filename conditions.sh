@@ -1,6 +1,6 @@
 #!/bin/bash
 
-la -ltr
+ls -ltr
 
 if [ $? -ne 0 ]; then
     echo " status of the command was failure"
