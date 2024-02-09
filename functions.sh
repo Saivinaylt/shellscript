@@ -17,9 +17,14 @@
 
 # jenkins
 
+ls -ltr
+
 VALIDATE(){
 
 if [ $? -ne 0 ]; then
+    echo " script name $0"
+    echo " number of arguments $#"
+    echo " all args are $@"
     echo " updating the apt repo failure $1"
     exit 1
 else 
@@ -28,7 +33,9 @@ fi
 
 }
 
-
+echo " script name $0"
+echo " number of arguments $#"
+echo " all args are $@"
 
 VALIDATE $1
 
