@@ -2,6 +2,9 @@
 
 # all concepts
 
+
+set -x
+
 validate(){
 
 if [ $1 -ne 0 ]; then
