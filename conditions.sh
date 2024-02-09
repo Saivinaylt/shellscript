@@ -16,4 +16,4 @@ if [ $USERID -ne o ]; then
     exit 1
 fi
 
-ls -ltr
+apt install git
