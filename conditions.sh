@@ -28,3 +28,12 @@ else
 fi
 
 apt install git -y
+
+if [ $? -ne 0 ]; then
+    echo "Failure"
+    exit 1
+else
+    echo "sucess"
+fi
+
+ls -ltr
