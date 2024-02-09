@@ -49,17 +49,61 @@ else
     echo "updating the apt repo Sucesss"
 fi 
 
-# sudo apt install fontconfig openjdk-17-jre
+sudo apt install fontconfig openjdk-17-jre
 
-# java -version
+if [ $? -ne 0 ]; then
+    echo " installing jdk failure"
+    exit 1
+else 
+    echo "installing Sucesss"
+fi 
 
-# sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-#   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+java -version
 
-# echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-#   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-#   /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 
-# sudo apt-get update
+if [ $? -ne 0 ]; then
+    echo " failure"
+    exit 1
+else 
+    echo " Sucesss"
+fi 
 
-# sudo apt-get install jenkins
+sudo apt install fontconfig openjdk-17-jre
+
+if [ $? -ne 0 ]; then
+    echo " failure"
+    exit 1
+else 
+    echo " Sucesss"
+fi 
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+if [ $? -ne 0 ]; then
+    echo " failure"
+    exit 1
+else 
+    echo " Sucesss"
+fi 
+
+sudo apt-get update
+
+if [ $? -ne 0 ]; then
+    echo " failure"
+    exit 1
+else 
+    echo " Sucesss"
+fi 
+
+sudo apt-get install jenkins
+
+if [ $? -ne 0 ]; then
+    echo "installing jenkins failure"
+    exit 1
+else 
+    echo "installing jenkins Sucesss"
+fi 
