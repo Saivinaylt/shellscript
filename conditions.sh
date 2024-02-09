@@ -9,10 +9,10 @@ fi
 
 
 
-USERID=$(id vinay)
+USERID=$(id root)
 echo "${USERID}"
-# if [ $USERID -ne 0 ]; then
-#     echo " u need to be root user "
-#     exit 1
-# fi
+if [ $USERID -ne 0 ]; then
+    echo " u need to be root user "
+    exit 1
+fi
 
