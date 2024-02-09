@@ -18,3 +18,6 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
+apt update -y
+
+apt install git -y
