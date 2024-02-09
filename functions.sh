@@ -26,13 +26,10 @@ if [ $? -ne 0 ]; then
     echo " number of arguments $#"
     echo " all args are $@"
     echo " updating the apt repo failure $1"
-    exit 1
-else 
-    echo "updating the apt repo Sucesss $1"
-fi
+
 
 }
-
+echo "before calling the function checking name : $1"
 echo " number of arguments $#"
 echo " all args are $@"
 
