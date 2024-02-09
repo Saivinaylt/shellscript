@@ -25,5 +25,6 @@ if [ $? -ne 0 ]; then
     exit 1
 else
     echo "sucess"
+fi
 
 apt install git -y
