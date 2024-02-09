@@ -33,7 +33,6 @@ fi
 
 }
 
-echo " script name $0"
 echo " number of arguments $#"
 echo " all args are $@"
 
