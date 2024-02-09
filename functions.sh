@@ -12,3 +12,5 @@ jenkins(){
 
   sudo apt-get install jenkins 
 }
+
+jenkins
