@@ -34,4 +34,4 @@ echo -n "enter username: "
 read -s username
 
 
-echo
+
