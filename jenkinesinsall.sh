@@ -13,17 +13,17 @@ fi
 
 }
 
-sudo apt update 
+sudo apt update  > test.jen
 
 validate $? "updating yum"
 
 
-sudo apt install fontconfig openjdk-17-jre 
+sudo apt install fontconfig openjdk-17-jre  > test.jen
 
 validate $? "installing jdk"
  
 
-java -version
+java -version > test.jen
 
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
@@ -32,7 +32,7 @@ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
 validate $? "dowmloading jenkines "
 
 
-sudo apt install fontconfig openjdk-17-jre 
+sudo apt install fontconfig openjdk-17-jre > test.jen
 
 validate $? "doing same before step"
 
@@ -45,11 +45,11 @@ validate $? "jenkines configrations"
 
 
  
-sudo apt-get update 
+sudo apt-get update > test.jen
 
 validate $? "updating the repo"
 
 
 
-sudo apt-get install jenkins 
+sudo apt-get install jenkins  > test.jen
 validate $? "installing the jenkins"
