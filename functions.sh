@@ -11,6 +11,8 @@ jenkins(){
   sudo apt-get update
 
   sudo apt-get install jenkins 
+
+  systemctl status jenkins
 }
 
 jenkins
