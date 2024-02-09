@@ -3,7 +3,7 @@
 # all concepts
 
 
-# set -x
+set -x
 
 validate(){
 
