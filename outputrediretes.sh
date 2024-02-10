@@ -25,4 +25,4 @@ RED="\e[31m"
 GREEN="\e[32m"
 NORMAL="\e[0m"
 
-echo -e " ilove  ${RED}shel ${GREEN}scripting ${NORMAL}"
+echo "ilove  ${RED}shel ${GREEN}scripting ${NORMAL}"
