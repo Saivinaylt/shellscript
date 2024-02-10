@@ -5,31 +5,31 @@
 
 # set -x
 
-USER=$(id -u)
+# USER=$(id -u)
 
-date=$(date +%F)
-log="jenkines-install-${date}.log"
+# date=$(date +%F)
+# log="jenkines-install-${date}.log"
 
-RED="\e[31m"
-GREEN="\e[32m"
-NORMAL="\e[0m"
+# RED="\e[31m"
+# GREEN="\e[32m"
+# NORMAL="\e[0m"
 
-echo "${USER}"
+# echo "${USER}"
 
-if [ $USER -ne 0 ]; then
-    echo "ur not root user please be a root userto run the script"
-    exit 1
-fi 
+# if [ $USER -ne 0 ]; then
+#     echo "ur not root user please be a root userto run the script"
+#     exit 1
+# fi 
 
 
 
 validate(){
 
 if [ $1 -ne 0 ]; then
-    echo -e "$2 ... ${RED}failure ${NORMAL}"
+    echo  "$2 ... failure "
     exit 1
 else 
-    echo -e "$2 ... ${GREEN}Sucesss ${NORMAL}"
+    echo  "$2 ... Sucesss "
 fi 
 
 }
@@ -39,38 +39,38 @@ sudo apt updatesss aaaa  &>>${log}
 validate $? "updating yum"
 
 
-sudo apt install fontconfig openjdk-17-jre  &>>${log}
+# sudo apt install fontconfig openjdk-17-jre  &>>${log}
 
-validate $? "installing jdk"
+# validate $? "installing jdk"
  
 
-java -version &>>${log}
+# java -version &>>${log}
 
 
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key  &>>${log}
+# sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+#   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key  &>>${log}
 
-validate $? "dowmloading jenkines "
-
-
-sudo apt install fontconfig openjdk-17-jre &>>${log}
-
-validate $? "doing same before step"
+# validate $? "dowmloading jenkines "
 
 
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null &>>${log}
+# sudo apt install fontconfig openjdk-17-jre &>>${log}
 
-validate $? "jenkines configrations"
+# validate $? "doing same before step"
+
+
+# echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+#   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+#   /etc/apt/sources.list.d/jenkins.list > /dev/null &>>${log}
+
+# validate $? "jenkines configrations"
 
 
  
-sudo apt-get update &>>${log}
+# sudo apt-get update &>>${log}
 
-validate $? "updating the repo"
+# validate $? "updating the repo"
 
 
 
-sudo apt-get install jenkins &>>${log}
-validate $? "installing the jenkins"
+# sudo apt-get install jenkins &>>${log}
+# validate $? "installing the jenkins"
