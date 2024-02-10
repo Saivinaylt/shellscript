@@ -34,7 +34,7 @@ fi
 
 }
 
-sudo apt updatesss  &>>${log}
+sudo apt updatesss aaaa  &>>${log}
 
 validate $? "updating yum"
 
