@@ -5,14 +5,14 @@
 
 # set -x
 
-USER=$(id -u)
+USERID=$(id -u)
 
-echo "${USER}
+echo "${USERID}"
 
-# if [ $USER -ne 0 ]; then
-#     echo "ur not root user please be a root userto run the script"
-#     exit 1
-# fi 
+if [ $USERID -ne 0 ]; then
+    echo " u need to be root user "
+    exit 1
+fi
 
 validate(){
 
