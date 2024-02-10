@@ -39,9 +39,9 @@ sudo apt updatesss aaaa
 validate $? "updating yum"
 
 
-# sudo apt install fontconfig openjdk-17-jre  &>>${log}
+sudo apt install fontconfig openjdk-17-jre  &>>${log}
 
-# validate $? "installing jdk"
+validate $? "installing jdk"
  
 
 # java -version &>>${log}
