@@ -7,6 +7,9 @@
 
 USER=$(id -u)
 
+date=$(date +%F)
+log="jenkines-install-${date}.log"
+
 echo "${USER}"
 
 if [ $USER -ne 0 ]; then
@@ -27,43 +30,43 @@ fi
 
 }
 
-sudo apt update  > test.jen
+sudo apt update  &>>${log}
 
 validate $? "updating yum"
 
 
-sudo apt install fontconfig openjdk-17-jre  > test.jen
+sudo apt install fontconfig openjdk-17-jre  &>>${log}
 
 validate $? "installing jdk"
  
 
-java -version > test.jen
+java -version &>>${log}
 
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key 
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key  &>>${log}
 
 validate $? "dowmloading jenkines "
 
 
-sudo apt install fontconfig openjdk-17-jre > test.jen
+sudo apt install fontconfig openjdk-17-jre &>>${log}
 
 validate $? "doing same before step"
 
 
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null 
+  /etc/apt/sources.list.d/jenkins.list > /dev/null &>>${log}
 
 validate $? "jenkines configrations"
 
 
  
-sudo apt-get update > test.jen
+sudo apt-get update &>>${log}
 
 validate $? "updating the repo"
 
 
 
-sudo apt-get install jenkins  > test.jen
+sudo apt-get install jenkins &>>${log}
 validate $? "installing the jenkins"
