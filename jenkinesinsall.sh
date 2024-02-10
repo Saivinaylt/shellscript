@@ -29,7 +29,7 @@ if [ $1 -ne 0 ]; then
     echo -e "$2 ... ${RED}failure ${NORMAL}"
     exit 1
 else 
-    echo "$2 ... ${GREEN}Sucesss ${NORMAL}"
+    echo -e "$2 ... ${GREEN}Sucesss ${NORMAL}"
 fi 
 
 }
