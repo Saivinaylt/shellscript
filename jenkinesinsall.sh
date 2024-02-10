@@ -68,5 +68,5 @@ validate $? "updating the repo"
 
 
 
-# sudo apt-get install jenkins &>>${log}
-# validate $? "installing the jenkins"
+sudo apt-get install jenkins &>>${log}
+validate $? "installing the jenkins"
