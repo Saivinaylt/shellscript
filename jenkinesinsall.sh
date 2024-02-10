@@ -10,6 +10,10 @@ USER=$(id -u)
 date=$(date +%F)
 log="jenkines-install-${date}.log"
 
+RED="\e[31m"
+GREEN="\e[32m"
+NORMAL="\e[0m"
+
 echo "${USER}"
 
 if [ $USER -ne 0 ]; then
@@ -22,10 +26,10 @@ fi
 validate(){
 
 if [ $1 -ne 0 ]; then
-    echo "$2 failure"
+    echo -e "$2 ... ${RED}failure ${NORMAL}"
     exit 1
 else 
-    echo "$2 Sucesss"
+    echo "$2 ... ${GREEN}Sucesss ${NORMAL}"
 fi 
 
 }
