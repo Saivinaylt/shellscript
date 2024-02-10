@@ -3,7 +3,16 @@
 # all concepts
 
 
-set -x
+# set -x
+
+USER=$(id -u)
+
+echo "${USER}
+
+if [ $USER -ne 0 ]; then
+    echo "ur not root user please be a root userto run the script"
+    exit 1
+fi 
 
 validate(){
 
