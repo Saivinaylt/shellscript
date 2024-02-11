@@ -11,5 +11,5 @@ do
 # Print the values
 echo $a
 # increment the value
-a=` $a + 1`
+a=`expr $a + 1`
 done
