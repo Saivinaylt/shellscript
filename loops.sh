@@ -39,4 +39,13 @@ fi
 echo “Iteration no $a”
 done
 
+u=0
+
+until [ $u -gt 30]
+do
+echo "printing $u"
+
+a=`expr $a + 1`
+done
+
 
