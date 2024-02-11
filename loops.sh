@@ -32,7 +32,7 @@ do
 # if a = 5 then continue the loop and
 # don’t move to line 8
 
-if [ $a == 5 ]
+if [ $a -lt 5 ]
 then
 continue
 fi
