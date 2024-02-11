@@ -47,7 +47,7 @@ u=0
 until [ $u -gt 10 ]
 do
 # Print the values
-echo $u
+echo "printing ${u}"
 
 # increment the value
 a=`expr $u + 1`
