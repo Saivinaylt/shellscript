@@ -7,9 +7,11 @@
 #Iterate the loop until a less than 10
 a=0
 
-while [ $a -lt 2 ]
+while [ $a -lt 20 ]
 do 
 echo $a
+
+a= `expr $a+1`
 
 done
 
