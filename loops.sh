@@ -41,11 +41,16 @@ done
 
 u=0
 
-until [ $u -gt 30]
-do
-echo "printing $u"
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
 
-a=`expr $a + 1`
+until [ $u -gt 10 ]
+do
+# Print the values
+echo $u
+
+# increment the value
+a=`expr $u + 1`
 done
 
 
