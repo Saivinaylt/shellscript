@@ -11,24 +11,21 @@ while [ $a -lt 20 ]
 do 
 echo $a
 
-a=`expr $a+1`
+a=`expr $a + 1`
 
 done
 
+# for 
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+
+echo "print the i value $i breat it when i = 5 requirement"
+
+if [ $i == 5 ]; then
+break
+fi
+
+echo "print th iteration: $i"
+done
 
 
-echo done
-
-# a=0
-
-# # lt is less than operator
-
-# #Iterate the loop until a less than 10
-
-# while [ $a -lt 10 ]
-# do
-# # Print the values
-# echo $a
-# # increment the value
-# a=`expr $a + 1`
-# done
