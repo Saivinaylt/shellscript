@@ -44,7 +44,7 @@ u=0
 # -gt is greater than operator
 #Iterate the loop until a is greater than 10
 
-until [ $u -gt 10 ]
+until [ $u -lt 10 ]
 do
 # Print the values
 echo "printing ${u}"
